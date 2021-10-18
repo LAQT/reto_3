@@ -1,6 +1,8 @@
+///////////////////Categoria//////////////////////////////////////
+
 function traerInformacionCategorias(){
     $.ajax({
-        url:"http://localhost:8080/api/Category/all",
+        url:"http://129.151.124.166:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -35,20 +37,20 @@ function guardarInformacionCategorias(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://localhost:8080/api/Category/save",
+        url:"http://129.151.124.166:8080/api/Category/save",
        
         
         success:function(response) {
                 console.log(response);
             console.log("Se guardo correctamente");
-            alert("Se guardo correctamente");
+            alert("Se guardo correctamente la informacion de Category");
             window.location.reload()
     
         },
         
         error: function(jqXHR, textStatus, errorThrown) {
               window.location.reload()
-            alert("No se guardo correctamente");
+            alert("No se guardo la información de Category");
     
     
         }
@@ -59,7 +61,7 @@ function guardarInformacionCategorias(){
 ///////////////////Rooms//////////////////////////////////////
 function traerInformacionRooms(){
     $.ajax({
-        url:"http://localhost:8080/api/Room/all",
+        url:"http://129.151.124.166:8080/api/Room/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -99,7 +101,7 @@ function guardarInformacionRooms(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://localhost:8080/api/Room/save",
+        url:"http://129.151.124.166:8080/api/Room/save",
        
         
         success:function(response) {
@@ -122,7 +124,7 @@ function guardarInformacionRooms(){
 //////////////////////Clientes//////////////////////////////////
 function traerInformacionClientes(){
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://129.151.124.166:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -161,7 +163,7 @@ function guardarInformacionClientes(){
         dataType: 'JSON',
         data: JSON.stringify(var4),
         
-        url:"http://localhost:8080/api/Client/save",
+        url:"http://129.151.124.166:8080/api/Client/save",
        
         
         success:function(response) {
